@@ -1,7 +1,7 @@
-### CloudEndure Post Launch Script
+# CloudEndure Post Launch Script
 CE 로 마이그레이션된 머신 기동 후 Background 에서 수행되는 Script
 
-### Windows
+# Windows
 ## File Pattern
 - 00.init
     - Script 중 최초로 수행됨
@@ -13,13 +13,13 @@ CE 로 마이그레이션된 머신 기동 후 Background 에서 수행되는 Sc
     - Migration 작업에 도움이 되는 파일 등.
 
 ## 삭제 스크립트 생성
-# find_uninstall_string.bat
+### find_uninstall_string.bat
 - 프로그램 추가/삭제 에서 Display Name 확인
 - 실행 (" 필수)
     - find_uninstall_string.bat "{Display Name}"
     - 삭제 명령어 확인
 
-# uninstall_template.bat
+### uninstall_template.bat
 - uninstall_template.bat 복사 후 아래 부분 변경
 ```
 REM #######   삭제 대상 별 변경 필요  ########
@@ -47,7 +47,7 @@ REM #######      END      ########
     - {Display Name} silent uninstall 등으로 검색
     - silent 옵션 확인 후 입력
 
-# 최종 파일명
+### 최종 파일명
 - Silent uninstall 지원 및 정상 동작
     - 01.{식별 가능 명칭}.bat
 - Silent uninstall 미지원 및 Background Service 에서 비정상 동작
